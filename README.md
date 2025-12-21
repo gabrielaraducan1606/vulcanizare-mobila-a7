@@ -1,0 +1,1 @@
+# vulcanizare-mobila-a7
