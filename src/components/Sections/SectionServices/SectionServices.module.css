@@ -1,0 +1,213 @@
+/* WRAP */
+.wrap{
+  padding: 18px 14px 22px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+.head{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  margin-bottom:16px;
+}
+
+.h2{
+  margin:0;
+  font-size: 22px;
+  letter-spacing: -0.3px;
+}
+
+.p{
+  margin:0;
+  color: rgba(255,255,255,0.78);
+  font-size: 14px;
+  line-height: 1.55;
+  max-width: 70ch;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap:14px;
+}
+
+/* CARD */
+.card{
+  border-radius: 18px;
+  padding: 16px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.03);
+  box-shadow: 0 16px 46px rgba(0,0,0,0.35);
+  display:flex;
+  flex-direction:column;
+  gap:14px; /* 🔑 aer între toate blocurile */
+}
+
+/* TOP */
+.cardTop{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.titleRow{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+}
+
+.title{
+  margin:0;
+  font-size: 16px;
+  letter-spacing: -0.2px;
+}
+
+.kicker{
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(39,209,127,.35);
+  background: rgba(39,209,127,.10);
+  color: rgba(219,255,238,0.95);
+  white-space: nowrap;
+}
+
+.desc{
+  margin:0;
+  font-size: 13px;
+  line-height: 1.55;
+  color: rgba(255,255,255,0.82);
+}
+
+/* CHIPS */
+.chips{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+
+/* individual chip */
+.chip{
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.04);
+  color: rgba(255,255,255,0.82);
+}
+
+/* INFO BOX */
+.infoBox{
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+  padding: 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(0,0,0,0.20);
+  margin-top: 4px; /* spațiu față de text */
+}
+
+.infoIcon{
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  font-size: 12px;
+  font-weight: 800;
+  color: rgba(0,0,0,0.85);
+  background: rgba(74,163,255,0.9);
+  flex: 0 0 auto;
+  margin-top: 1px;
+}
+
+.infoText{
+  font-size: 12px;
+  line-height: 1.5;
+  color: rgba(255,255,255,0.78);
+}
+
+/* ACTIONS */
+.actions{
+  display:flex;
+  gap:10px;          /* spațiu între butoane */
+  margin-top: 6px;   /* spațiu față de info box */
+}
+
+/* BUTTONS */
+.call, .wa, .waGhost{
+  flex:1; /* 🔑 toate egale pe un rând */
+  border-radius: 14px;
+  padding: 12px 10px;
+  border: 1px solid rgba(255,255,255,0.10);
+  font-weight: 800;
+  font-size: 13px;
+  cursor:pointer;
+  text-decoration:none;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  white-space: nowrap;
+}
+
+/* Call */
+.call{
+  background: rgba(74,163,255,.16);
+}
+
+/* WhatsApp GPS */
+.wa{
+  background: rgba(39,209,127,.14);
+  border-color: rgba(39,209,127,.42);
+  color: rgba(255,255,255,0.92);
+}
+
+/* WhatsApp no GPS */
+.waGhost{
+  background: rgba(255,255,255,.04);
+  color: rgba(255,255,255,0.88);
+}
+
+.call:hover{ border-color: rgba(74,163,255,.45); }
+.wa:hover{ background: rgba(39,209,127,.20); }
+.waGhost:hover{ background: rgba(255,255,255,.08); }
+
+/* FOOT NOTE */
+.footerNote{
+  margin-top: 14px;
+  display:flex;
+  gap:10px;
+  align-items:center;
+  color: rgba(255,255,255,0.70);
+  font-size: 12px;
+}
+
+.noteDot{
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(39,209,127,0.75);
+  box-shadow: 0 0 0 6px rgba(39,209,127,0.12);
+}
+
+/* DESKTOP */
+@media (min-width: 720px){
+  .wrap{ padding: 26px 18px 34px; }
+  .h2{ font-size: 26px; }
+  .p{ font-size: 15px; }
+  .grid{ grid-template-columns: repeat(2, 1fr); gap:16px; }
+  .title{ font-size: 18px; }
+  .desc{ font-size: 14px; }
+}
+
+/* LARGE */
+@media (min-width: 1024px){
+  .grid{ grid-template-columns: repeat(4, 1fr); }
+}

@@ -1,0 +1,46 @@
+.wrap{ position:relative; }
+.burger{
+  width:44px;
+  height:44px;
+  border-radius:14px;
+  border:1px solid var(--border);
+  background: rgba(255,255,255,.04);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  gap:6px;
+  cursor:pointer;
+}
+.burger span{
+  display:block;
+  width:18px;
+  height:2px;
+  background: rgba(233,238,252,.92);
+  border-radius:999px;
+}
+.panel{
+  position:absolute;
+  right:0;
+  top:52px;
+  width:220px;
+  background: rgba(18,22,35,.96);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:10px;
+  box-shadow: 0 30px 60px rgba(0,0,0,.35);
+}
+.item{
+  width:100%;
+  text-align:left;
+  padding:10px 12px;
+  border-radius:12px;
+  border:1px solid transparent;
+  background: transparent;
+  color: var(--text);
+  cursor:pointer;
+}
+.item:hover{
+  background: rgba(74,163,255,.10);
+  border-color: rgba(74,163,255,.20);
+}

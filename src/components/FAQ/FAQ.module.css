@@ -1,0 +1,27 @@
+.wrap{ display:flex; flex-direction:column; gap:10px; }
+.item{
+  border:1px solid var(--border);
+  background: rgba(255,255,255,.03);
+  border-radius:16px;
+  overflow:hidden;
+}
+.q{
+  width:100%;
+  padding:12px 12px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  background:transparent;
+  border:0;
+  color:var(--text);
+  font-weight:800;
+  cursor:pointer;
+  text-align:left;
+}
+.icon{ opacity:.85; }
+.a{
+  padding: 0 12px 12px;
+  color: var(--muted);
+  line-height:1.45;
+}
