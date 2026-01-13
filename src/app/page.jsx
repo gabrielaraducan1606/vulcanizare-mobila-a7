@@ -2,12 +2,14 @@ import styles from "../components/Sections/Sections.module.css";
 import { SITE } from "../lib/config.js";
 import { defaultMetadata } from "../lib/seo.js";
 
-import BurgerMenu from "../components/BurgerMenu/BurgerMenu.jsx";
 import SectionHero from "../components/Sections/SectionHero/SectionHero.jsx";
 import SectionServices from "../components/Sections/SectionServices/SectionServices.jsx";
 import SectionCoverage from "../components/Sections/SectionCoverage.jsx";
 import SectionFAQ from "../components/Sections/SectionFaq.jsx";
 import SectionContact from "../components/Sections/SectionContact.jsx";
+import SectionAssist from "../components/Sections/SectionAssist.jsx";
+import SectionReviews from "../components/Sections/SectionReviews.jsx";
+import SectionGallery from "../components/Sections/SectionGaleery.jsx";
 
 export const metadata = defaultMetadata({
   title: "Vulcanizare mobilă 24/7 – intervenție rapidă",
@@ -19,30 +21,30 @@ export const metadata = defaultMetadata({
 export default function HomePage() {
   return (
     <div className={styles.page}>
-      <header className={styles.header}>
-        <div className={styles.brand}>
-          <div className={styles.logo}>●</div>
-          <div>
-            <div className={styles.brandName}>{SITE.brand}</div>
-            <div className={styles.brandSub}>{SITE.serviceAreaLabel}</div>
-          </div>
-        </div>
-
-        <BurgerMenu />
-      </header>
-
       <main className={styles.main}>
         <section id="hero" className={styles.section}>
           <SectionHero />
         </section>
 
-        <section id="services" className={styles.section}>
+ <section id="coverage" className={styles.section}>
+          <SectionCoverage />
+        </section>
+
+ <section id="services" className={styles.section}>
           <SectionServices />
         </section>
 
-        <section id="coverage" className={styles.section}>
-          <SectionCoverage />
-        </section>
+  <section id="assist" className={styles.section}>
+    <SectionAssist />
+  </section>
+
+<section id="reviews" className={styles.section}>
+  <SectionReviews />
+</section>
+
+<section id="gallery" className={styles.section}>
+  <SectionGallery />
+</section>
 
         <section id="faq" className={styles.section}>
           <SectionFAQ />
@@ -54,8 +56,27 @@ export default function HomePage() {
       </main>
 
       <footer className={styles.footer}>
-        <div>© {new Date().getFullYear()} {SITE.brand}. Toate drepturile rezervate.</div>
-      </footer>
+  <div className={styles.footerInner}>
+    <div className={styles.footerLeft}>
+      <div>
+        © {new Date().getFullYear()} {SITE.brand}. Toate drepturile rezervate.
+      </div>
+      <div className={styles.footerMeta}>
+        Intervenție: A7 + zone limitrofe · {SITE.baseLabel}
+      </div>
+    </div>
+
+    <div className={styles.footerRight}>
+      <a className={styles.footerLink} href="/termeni">
+        Termeni și condiții
+      </a>
+      <a className={styles.footerLink} href="/confidentialitate">
+        Politica de confidențialitate
+      </a>
+    </div>
+  </div>
+</footer>
+
     </div>
   );
 }
