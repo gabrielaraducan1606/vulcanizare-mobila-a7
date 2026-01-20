@@ -1,7 +1,8 @@
 export const SITE = {
   brand: "Vulcanizare Mobilă",
 
-  phone: "0774087678",
+  phone: "0774087678", 
+  phone: "0786989556",
   whatsappPhone: "40774087678",
 
   serviceAreaLabel: "Autostrada A7 + zone limitrofe",

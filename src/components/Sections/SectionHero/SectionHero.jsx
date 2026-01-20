@@ -49,7 +49,7 @@ export default function SectionHero() {
 
           <h1 className={styles.h1}>
             Vulcanizare mobilă pentru{" "}
-            <span className={styles.accent}>mașini</span> și{" "}
+            <span className={styles.accent}>autoturisme</span> și{" "}
             <span className={styles.accent2}>camioane</span> pe A7
           </h1>
 
